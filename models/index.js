@@ -39,9 +39,7 @@ const Admin = require("./admin.model")(sequelize);
 const ItemCategory = require("./item-category.model")(sequelize);
 const Item = require("./item.model")(sequelize);
 
-
 //Create associations 
-
 Order.belongsTo(Table, {
     foreignKey: "table_id",
   });
@@ -58,8 +56,6 @@ Admin.belongsTo(OrderItem, {
     foreignKey: "order_item_id",
   });
 
-
-// Exports (remember enhanced object literal)
 module.exports = {
   sequelize,
   testConnection,

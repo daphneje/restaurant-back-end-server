@@ -1,27 +1,26 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const app = express();
+const app = require('./routes');
+// const bodyParser = require("body-parser");
+// const cors = require("cors");
 
-const { testConnection} = require('./models');
-testConnection();
+// const { testConnection} = require('./models');
+// testConnection();
 
-const corsOptions = {
-  origin: "http://localhost:8081"
-};
+// const corsOptions = {
+//   origin: "http://localhost:8081"
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to restaurant application." });
-});
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to restaurant application." });
+// });
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

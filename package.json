@@ -1,10 +1,11 @@
 {
   "name": "restaurant-back-end-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Restaurant Back-End Server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

@@ -1,7 +1,7 @@
 // Import
 const orderItemService = require("../services/order-item.service");
 
-class orderItemController {
+class OrderItemController {
   async newOrderItem(req, res, next) {
 
     console.log(typeof req.body.orderId);
