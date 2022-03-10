@@ -5,9 +5,7 @@ class orderItemController {
   async newOrderItem(req, res, next) {
 
     console.log(typeof req.body.orderId);
-    if (
-      typeof req.body.orderId !== "number" ||
-    ) {
+    if (typeof req.body.orderId !== "number") {
       res.status(400); // bad request
       return res.json({ message: "Incorrect request data" });
     }
