@@ -10,7 +10,7 @@ const orderItemController = new OrderItemController();
 // Invoke newOrderItem() in orderItemController based on the route
 router.post('/orderItem/newOrderItem', orderItemController.newOrderItem);
 
-// Retrieve all Order Items
+// Retrieve Order Item details
 router.get("/orderItem/:orderItemId", orderItemController.orderItemDetails);
 
 // Delete an Order Ittem with id

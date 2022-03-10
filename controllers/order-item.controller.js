@@ -4,11 +4,11 @@ const orderItemService = require("../services/order-item.service");
 class OrderItemController {
   async newOrderItem(req, res, next) {
 
-    console.log(typeof req.body.orderId);
-    if (typeof req.body.orderId !== "number") {
-      res.status(400); // bad request
-      return res.json({ message: "Incorrect request data" });
-    }
+    // console.log(`typeof req.params.orderId ${typeof req.params.orderId}`);
+    // if (typeof req.params.orderId !== "number") {
+    //   res.status(400); // bad request
+    //   return res.json({ message: "Incorrect request data" });
+    // }
 
     // Consume the service layer
     const result = await orderItemService.newOrderItem(req.body.orderId, req.body.createOrderItem);    
