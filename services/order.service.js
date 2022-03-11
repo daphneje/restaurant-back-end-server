@@ -12,15 +12,13 @@ module.exports = {
     // {
     //   "tableId": 2,
     //   "createOrder": {
-    //       "dateTime": "now()",
     //       "restaurantId": 1,
     //       "billAmount": "",
-    //       "status": Pending"
+    //       "status": "Pending"
     //   }
     // }
 
     console.log(`tableId: ${tableId}`);
-    console.log(`createOrder.dateTime: ${createOrder.dateTime}`);
     console.log(`createOrder.restaurantId: ${createOrder.restaurantId}`);
     console.log(`createOrder.billAmount: ${createOrder.billAmount}`);
     console.log(`createOrder.status: ${createOrder.status}`);
@@ -28,7 +26,6 @@ module.exports = {
     const order = await Order.create(
       {
         tableId: tableId,
-        dateTime: createOrder.dateTime,
         restaurantId: createOrder.restaurantId,
         billAmount: createOrder.billAmount,
         status: createOrder.status

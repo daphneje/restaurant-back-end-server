@@ -17,7 +17,7 @@ module.exports = {
     //       "itemUnitPrice": "9.90",
     //       "quantity": 1,
     //       "specialRequest": "No onions",
-    //       "status": "ongoing"
+    //       "status": "Preparing"
     //   }
     // }
 

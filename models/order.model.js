@@ -18,7 +18,7 @@ module.exports = function (sequelize) {
       },
       dateTime: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
         field: "date_time",
       },
       restaurantId: {
@@ -29,7 +29,7 @@ module.exports = function (sequelize) {
       billAmount: {
         type: DataTypes.NUMBER,
         allowNull: true,
-        field: "unit_price",
+        field: "bill_amount",
       },
       status: {
         type: DataTypes.STRING,
