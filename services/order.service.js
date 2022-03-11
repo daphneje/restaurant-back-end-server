@@ -56,7 +56,7 @@ module.exports = {
       }
 
     if (order) {
-        result.message = 'Order with OrderId:${orderId} found.';
+        result.message = `Order with OrderId:${orderId} found.`;
         result.data = order    
         result.status = 200;
         return result;
