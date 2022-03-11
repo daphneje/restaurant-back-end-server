@@ -93,7 +93,7 @@ module.exports = {
       }
 
     if (order) {
-        result.message = `Order items in Order orderId:${orderId} found.`;
+        result.message = `List of all Order Items in Order orderId:${orderId} generated.`;
         result.data = order    
         result.status = 200;
         return result;

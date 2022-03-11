@@ -82,7 +82,7 @@ module.exports = {
         return result;
       }
 
-        result.message = "List of all items generated.";
+        result.message = "List of all Items generated.";
         result.data = items    
         result.status = 200;
         return result;
