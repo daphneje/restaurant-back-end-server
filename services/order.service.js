@@ -1,4 +1,4 @@
-const { Order, OrderItem } = require("../models");
+const { Order } = require("../models");
 
 module.exports = {
   newOrder: async (tableId, createOrder) => {
@@ -50,13 +50,13 @@ module.exports = {
     const order = await Order.findByPk(orderId);
 
     if (!order) {
-        result.message = `Order with OrderId:${orderId} not found.`;
+        result.message = `Order with orderId:${orderId} not found.`;
         result.status = 404;
         return result;
       }
 
     if (order) {
-        result.message = `Order with OrderId:${orderId} found.`;
+        result.message = `Order with orderId:${orderId} found.`;
         result.data = order    
         result.status = 200;
         return result;

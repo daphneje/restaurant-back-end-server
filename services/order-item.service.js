@@ -1,4 +1,4 @@
-const { Order, OrderItem } = require("../models");
+const { OrderItem } = require("../models");
 
 module.exports = {
   newOrderItem: async (orderId, createOrderItem) => {
@@ -28,15 +28,6 @@ module.exports = {
     // console.log(`createOrderItem.quantity: ${createOrderItem.quantity}`);
     // console.log(`createOrderItem.specialRequest: ${createOrderItem.specialRequest}`);
     // console.log(`createOrderItem.status: ${createOrderItem.status}`);
-
-    // const order = await Order.findByPk(orderId);
-
-    // if (!order) {
-    //   result.message = `Order ID ${orderId} is not found, order item cannot be added.`;
-    //   result.data = 'Not applicable';      
-    //   result.status = 404;
-    //   return result;
-    // }
 
     const orderItem = await OrderItem.create(
       {
@@ -68,13 +59,13 @@ module.exports = {
     const orderItem = await OrderItem.findByPk(orderItemId);
 
     if (!orderItem) {
-        result.message = `Order Item with OrderItemId:${orderItemId} not found.`;
+        result.message = `Order Item with orderItemId:${orderItemId} not found.`;
         result.status = 404;
         return result;
       }
 
     if (orderItem) {
-        result.message = `Order Item with OrderItemId:${orderItemId} found.`;
+        result.message = `Order Item with orderItemId:${orderItemId} found.`;
         result.data = orderItem    
         result.status = 200;
         return result;
@@ -96,13 +87,13 @@ module.exports = {
 
     console.log(`order: ${order}`);
     if (order.length <= 0) {
-        result.message = `Order OrderId:${orderId} not found.`;
+        result.message = `Order orderId:${orderId} not found.`;
         result.status = 404;
         return result;
       }
 
     if (order) {
-        result.message = `Order items in Order OrderId:${orderId} found.`;
+        result.message = `Order items in Order orderId:${orderId} found.`;
         result.data = order    
         result.status = 200;
         return result;

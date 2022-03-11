@@ -17,6 +17,6 @@ router.get("/orderItems/orderItemId/:orderItemId", orderItemController.orderItem
 router.get("/orderItems/orderId/:orderId", orderItemController.orderItemsInOrder);
 
 // Delete an Order Item with id
-// router.delete("/orderItem/:orderItemId", orderItemController.delete);
+// router.delete("/orderItems/:orderItemId", orderItemController.delete);
 
 module.exports = router;

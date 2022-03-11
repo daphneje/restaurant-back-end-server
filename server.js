@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to restaurant application." });
+  res.json({ message: "Welcome to restaurant application back-end server." });
 });
 
 // set port, listen for requests
