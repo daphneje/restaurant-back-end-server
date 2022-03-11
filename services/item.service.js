@@ -61,7 +61,7 @@ module.exports = {
 
     if (item) {
         result.message = `Item with itemId:${itemId} found.`;
-        result.data = order    
+        result.data = item    
         result.status = 200;
         return result;
     }
@@ -83,7 +83,7 @@ module.exports = {
       }
 
         result.message = "List of all items generated.";
-        result.data = orders    
+        result.data = items    
         result.status = 200;
         return result;
 
