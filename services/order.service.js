@@ -13,7 +13,7 @@ module.exports = {
     //   "tableId": 3,
     //   "createOrder": {
     //       "restaurantId": 1,
-    //       "billAmount": "0", 0 OR omit line
+    //       "billAmount": "0", //  (Value must be number else omit line)
     //       "status": "Pending"
     //   }
     // }
