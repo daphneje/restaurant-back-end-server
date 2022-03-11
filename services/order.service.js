@@ -12,10 +12,10 @@ module.exports = {
     // {
     //   "tableId": 2,
     //   "createOrder": {
-    //       "dateTime": "",
+    //       "dateTime": "now()",
     //       "restaurantId": 1,
     //       "billAmount": "",
-    //       "status": "pending"
+    //       "status": Pending"
     //   }
     // }
 
