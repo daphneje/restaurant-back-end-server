@@ -10,10 +10,10 @@ module.exports = {
 
     // Input data - format
     // {
-    //   "tableId": 2,
+    //   "tableId": 3,
     //   "createOrder": {
     //       "restaurantId": 1,
-    //       "billAmount": "",
+    //       "billAmount": "0", 0 OR omit line
     //       "status": "Pending"
     //   }
     // }
