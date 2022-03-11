@@ -8,12 +8,15 @@ const OrderItemController = require("../controllers/order-item.controller");
 const orderItemController = new OrderItemController();
 
 // Invoke newOrderItem() in orderItemController based on the route
-router.post('/orderItem/newOrderItem', orderItemController.newOrderItem);
+router.post('/orderItems', orderItemController.newOrderItem);
 
 // Retrieve Order Item details
-router.get("/orderItem/:orderItemId", orderItemController.orderItemDetails);
+router.get("/orderItems/orderItemId/:orderItemId", orderItemController.orderItemDetails);
 
-// Delete an Order Ittem with id
+// Retrieve all Order Items in an Order
+router.get("/orderItems/orderId/:orderId", orderItemController.orderItemsInOrder);
+
+// Delete an Order Item with id
 // router.delete("/orderItem/:orderItemId", orderItemController.delete);
 
 module.exports = router;

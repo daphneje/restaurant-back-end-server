@@ -8,6 +8,19 @@ module.exports = {
       data: null,
     };
 
+    // Input data - format
+    // {
+    //   "orderId": 2,
+    //   "createOrderItem": {
+    //       "itemId": 45,
+    //       "itemTitle": "Spaghetti Carbonara",
+    //       "itemUnitPrice": "9.90",
+    //       "quantity": 1,
+    //       "specialRequest": "No onions",
+    //       "status": "ongoing"
+    //   }
+    // }
+
     // console.log(`orderId: ${orderId}`);
     // console.log(`createOrderItem.itemId: ${createOrderItem.itemId}`);
     // console.log(`createOrderItem.itemTitle: ${createOrderItem.itemTitle}`);
@@ -55,14 +68,42 @@ module.exports = {
     const orderItem = await OrderItem.findByPk(orderItemId);
 
     if (!orderItem) {
-        result.message = `Order Item with OrderItemId ${orderItemId} not found.`;
+        result.message = `Order Item with OrderItemId:${orderItemId} not found.`;
         result.status = 404;
         return result;
       }
 
     if (orderItem) {
-        result.message = 'Order Item Found';
+        result.message = `Order Item with OrderItemId:${orderItemId} found.`;
         result.data = orderItem    
+        result.status = 200;
+        return result;
+    }
+  },
+
+  orderItemsInOrder: async (orderId) => {
+    let result = {
+      message: null,
+      status: null,
+      data: null,
+    };
+
+    const order = await OrderItem.findAll(
+      {
+        where: { orderId: orderId}
+      }
+    );
+
+    console.log(`order: ${order}`);
+    if (order.length <= 0) {
+        result.message = `Order OrderId:${orderId} not found.`;
+        result.status = 404;
+        return result;
+      }
+
+    if (order) {
+        result.message = `Order items in Order OrderId:${orderId} found.`;
+        result.data = order    
         result.status = 200;
         return result;
     }

@@ -27,6 +27,15 @@ class OrderItemController {
     return res.json({data: result.data, message: result.message});
   }
 
+  async orderItemsInOrder(req,res,next) {
+    const result = await orderItemService.orderItemsInOrder(req.params.orderId)
+    res.status(result.status);
+    console.log (result);
+
+    //Return results
+    return res.json({data: result.data, message: result.message});
+  }
+
 }
 
 module.exports = OrderItemController;
