@@ -13,6 +13,7 @@ module.exports = {
     //   "tableId": 3,
     //   "createOrder": {
     //       "restaurantId": 1,
+    //       "noOfPax": 5,
     //       "billAmount": "0", //  (Value must be number else omit line)
     //       "status": "Pending"
     //   }
@@ -20,6 +21,7 @@ module.exports = {
 
     console.log(`tableId: ${tableId}`);
     console.log(`createOrder.restaurantId: ${createOrder.restaurantId}`);
+    console.log(`createOrder.noOfPax: ${createOrder.noOfPax}`);
     console.log(`createOrder.billAmount: ${createOrder.billAmount}`);
     console.log(`createOrder.status: ${createOrder.status}`);
 
@@ -27,6 +29,7 @@ module.exports = {
       {
         tableId: tableId,
         restaurantId: createOrder.restaurantId,
+        noOfPax: createOrder.noOfPax,
         billAmount: createOrder.billAmount,
         status: createOrder.status
       }

@@ -26,6 +26,11 @@ module.exports = function (sequelize) {
         allowNull: true,
         field: "restaurant_id",
       },
+      noOfPax: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        field: "no_of_pax",
+      },
       billAmount: {
         type: DataTypes.NUMBER,
         allowNull: true,

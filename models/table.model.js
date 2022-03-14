@@ -11,11 +11,6 @@ module.exports = function (sequelize) {
         autoIncrement: true,
         field: "table_id",
       },
-      noOfPax: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        field: "no_of_pax",
-      },
       createdAt: {
         type: DataTypes.DATE,
         field: "created_at",
