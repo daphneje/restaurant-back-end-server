@@ -85,6 +85,34 @@ module.exports = {
         result.data = orders    
         result.status = 200;
         return result;
-
   }
+
+  // getOrderByTableId: async (tableId) => {
+  //   let result = {
+  //     message: null,
+  //     status: null,
+  //     data: null,
+  //   };
+
+  //   const order = await Order.findOne({
+  //     where: {
+  //       tableId: tableId
+  //     }
+  //   });
+
+  //   if (!order) {
+  //       result.message = `Order with tableId:${tableId} not found.`;
+  //       result.status = 404;
+  //       return result;
+  //     }
+
+  //   if (order) {
+  //       result.message = `Order with tableId:${tableId} found.`;
+  //       result.data = order    
+  //       result.status = 200;
+  //       return result;
+  //   }
+  // }
+
+
 };

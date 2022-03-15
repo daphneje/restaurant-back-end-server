@@ -41,6 +41,19 @@ class OrderController {
     }
   }
 
+  // async getOrderByTableId(req,res,next) {
+  //   try{
+  //   const result = await orderService.getOrderByTableId(req.params.tableId)
+  //   res.status(result.status);
+  //   console.log (result);
+
+  //   //Return results
+  //   return res.json({data: result.data, message: result.message});
+  //   } catch (error) {
+  //   return res.status(500).json(error);
+  //   }
+  // }
+
 }
 
 module.exports = OrderController;
