@@ -7,7 +7,7 @@ const { testConnection } = require('../models');
 testConnection();
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://polar-brushlands-46080.herokuapp.com", "https://restaurant-deploy.herokuapp.com", "https://gentle-thicket-13588.herokuapp.com"]
+  origin: ["http://localhost:3000", "https://restaurant-deploy.herokuapp.com", "https://gentle-thicket-13588.herokuapp.com"]
 };
 
 app.use(cors(corsOptions));
